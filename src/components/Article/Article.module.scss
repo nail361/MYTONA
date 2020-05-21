@@ -1,0 +1,21 @@
+.ArticleWrapper {
+  height: 50px;
+  width: 250px;
+  background-color: lightgray;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px;
+  margin: 0 auto;
+}
+
+.Title {
+  background-color: lightpink;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  height: 60%;
+  user-select: none;
+}
+
+.Date {
+  user-select: none;
+}

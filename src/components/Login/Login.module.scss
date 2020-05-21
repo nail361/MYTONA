@@ -1,0 +1,14 @@
+.LoginWindow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+
+  div {
+    text-align: center;
+  }
+}
+
+.Error {
+  color: red;
+}

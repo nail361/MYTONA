@@ -1,0 +1,25 @@
+.NewsList {
+  height: 200px;
+}
+
+.Pagination {
+  margin: 30px auto;
+  padding: 0;
+
+  li {
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+    cursor: pointer;
+
+    &.Active{
+      font-weight: 800;
+    }
+  }
+}
+
+.LoginPageBtn {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+}
