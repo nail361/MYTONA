@@ -5,6 +5,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Redirect,
 } from "react-router-dom";
 import * as actions from '../../actions/AppActions';
 import * as API from '../../utils/API';
@@ -49,15 +50,10 @@ class App extends PureComponent {
     return (
       <Router>
         <Switch>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/article">
-            <ArticleDetailed />
-          </Route>
-          <Route path="/">
-            <News />
-          </Route>
+          <Route path="/login" component={Login} />
+          <Route path="/article/:id" component={ArticleDetailed} />
+          <Route exact path="/" component={News} />
+          <Route path="/" render={() => <Redirect to='/' />} />
         </Switch>
       </Router>
     );

@@ -26,7 +26,7 @@ class News extends PureComponent {
 
   onChooseArticle(articleId) {
     const { history } = this.props;
-    history.push(`/article?id=${articleId}`);
+    history.push(`/article/${articleId}`);
   }
 
   onLoginPageClick() {
@@ -43,7 +43,7 @@ class News extends PureComponent {
       return (
         <Redirect to='/login' />
       );
-    }
+    }   
 
     return (
       <div>

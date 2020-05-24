@@ -1,11 +1,10 @@
 import React from 'react';
-import { useLocation, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import { NEWS } from '../../../data/dummy-data';
 import classes from './ArticleDetailed.module.scss'; 
 
 function ArticleDetailed(props) {
-  const query = new URLSearchParams(useLocation().search);
-  const articleId = query.get("id");
+  const articleId = props.match.params.id;
   const article = NEWS.find( (article) => article.id === articleId );
   
   if (!article) return <Redirect to="/" />
